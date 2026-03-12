@@ -1,0 +1,124 @@
+/*import font*/
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+/*define custom variables*/
+:root {
+  /* Late Night Bath Palette by sukinapan https://lospec.com/palette-list/late-night-bath */
+  --col01: #282d3c;
+  --col02: #f0f6f0;
+  --col03: #ffc4b8;
+  --col04: #5b5d70;
+  --col05: #74838c;
+  --col06: #f69197;
+  --col07: #f85661;
+  --border: solid 2px var(--col04);
+}
+
+/* I wanted to have it so that the website is more balanced hence adjusting it to make it a row instead of a column design.   */
+body {
+  font-family: "Work Sans", serif;
+  background-color: var(--col01);
+  color: var(--col02);
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  gap: 2rem;
+  max-width: 1280px;
+  /* padding: 0 3rem; */
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+  padding-top: 1rem;
+}
+
+/*intro modal dialog*/
+dialog[open] {
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ------Slider Container------ */
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.iconContainer {
+  display: flex;
+  gap: 10px;
+}
+
+.iconContainer span {
+  font-size: 30px;
+}
+
+/* ------ Slider Design------ */
+
+input {
+  -webkit-appearance: var(--col03);
+  background: transparent;
+  cursor: pointer;
+  width: 15rem;
+}
+
+/* Using a gradient colour to make it cohesive. Having each of the different sliders be different shades since they produce different functions.   */
+/* slider track */
+#var1Range[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--col03);
+  border-radius: 10px;
+  height: 10px;
+}
+
+#var2Range[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--col06);
+  border-radius: 10px;
+  height: 10px;
+}
+
+#var3Range[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--col07);
+  border-radius: 10px;
+  height: 10px;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -3px; /* Centers thumb on the track */
+  background-color: var(--col05);
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #808080;
+  outline-offset: 0.125rem;
+}
+
+.piano {
+  padding: 50px;
+}
+
+/* Matched the button to the colour scheme of the website */
+button {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--col03);
+  color: var(--col01);
+  border-color: none;
+  cursor: pointer;
+}
