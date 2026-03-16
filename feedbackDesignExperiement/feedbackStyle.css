@@ -1,11 +1,12 @@
 body {
-  text-align: center;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: white;
   transition: background-color 0.5s ease;
   display: flex;
-  justify-content: center; /* Centers horizontally */
-  align-items: center; /* Centers vertically */
-  min-height: 100vh; /* Makes the container at least the full height of the viewport */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 dialog {
@@ -34,4 +35,18 @@ button {
 
 #play-btn:active {
   width: 30rem;
+}
+
+#header {
+  color: blue;
+  transition: color 0.5s ease;
+}
+
+#stop-text {
+  color: white;
+  font-weight: bold;
+}
+
+.hidden {
+  opacity: 0;
 }

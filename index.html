@@ -21,15 +21,26 @@
     <!-- Desktop -->
     <div class="desktop">
       <section class="about-me">
-        <div class="folder" ondblclick="openWindow()" onclick="selectFolder()">
-          <img src="img/Folder.png" alt="folder-1" id="folder-1" />
+        <div class="folder">
+          <img
+            src="img/Folder.png"
+            alt="folder-1"
+            id="about-me-file"
+            ondblclick="openWindow('about-me')"
+          />
+
           <p style="margin: 0px">About Me</p>
         </div>
       </section>
 
       <section class="assingment-1">
-        <div class="folder" ondblclick="openWindow()" onclick="selectFolder()">
-          <img src="img/Folder.png" alt="folder-1" id="folder-2" />
+        <div class="folder">
+          <img
+            src="img/Folder.png"
+            alt="folder-1"
+            id="ass-1-file"
+            ondblclick="openWindow('ass-1')"
+          />
           <p style="margin: 0px">Assignment 1</p>
         </div>
       </section>
@@ -38,20 +49,25 @@
     <!-- Finder Window -->
     <div class="finder-window" id="finder-win">
       <div class="titlebar" id="win-titlebar">
+        <!-- Window Button -->
         <div class="traffic-lights">
           <div class="tl tl-red" id="close-btn"></div>
           <div class="tl tl-yellow"></div>
           <div class="tl tl-green"></div>
         </div>
-        <div class="win-title">About Me</div>
+        <div class="win-title" id="win-title-text">About Me</div>
       </div>
+
+      <!-- Window Sidebar -->
       <div class="win-body">
         <div class="sidebar">
           <div class="sidebar-head">Favourites</div>
-          <div class="sidebar-row active">👻 About Me</div>
-          <div class="sidebar-row">🗂️ Assignment 1</div>
+          <div class="sidebar-row" data-tab="about-me">👻 About Me</div>
+          <div class="sidebar-row" data-tab="ass-1">🗂️ Assignment 1</div>
         </div>
-        <div class="win-content" id="about-me-con">
+
+        <!-- Window Conten -->
+        <div class="win-content active" id="tab-about-me">
           <h2>Hello, I'm Jannalyn!</h2>
           <p style="font-size: 14px">
             I grew up in Singapore but moved to Melbourne in 2024 to further my
@@ -81,8 +97,14 @@
             >🔗 Link to my Feedback Experiment</a
           >
         </div>
+
+        <div class="win-content" id="tab-ass-1">
+          <h2>Assignment 1 🗂️</h2>
+          <p>Add your Assignment 1 content here.</p>
+        </div>
       </div>
-      <div class="win-statusbar">item</div>
+
+      <div class="win-statusbar">2 item</div>
     </div>
 
     <script src="script.js"></script>

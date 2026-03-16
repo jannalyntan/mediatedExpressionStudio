@@ -1,183 +1,168 @@
-/* ============================================
-   BASE
-   ============================================ */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: url("desktop-background.jpg") no-repeat center center fixed;
-  background-size: cover;
+    -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue",
+    sans-serif;
+  background: #1e1e2e;
   height: 100vh;
   overflow: hidden;
+  user-select: none;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-/* ============================================
-   MENU BAR
-   ============================================ */
+/* ── Menu Bar ── */
 .menu-bar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  height: 24px;
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
+  height: 28px;
+  background: rgba(30, 30, 46, 0.85);
+  backdrop-filter: blur(20px);
   display: flex;
   align-items: center;
   padding: 0 12px;
-  gap: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
-  z-index: 300;
+  gap: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  z-index: 999;
 }
-
 .apple-logo {
-  font-size: 16px;
+  width: 14px;
+  height: 14px;
+  background: white;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 814 1000'%3E%3Cpath d='M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-42.4-150.3-107.9C27.8 743.2 0 651.1 0 563.4c0-249.8 175.6-381.4 348.3-381.4 92.4 0 169.7 60.8 227.6 60.8 54.7 0 140.5-64.4 244.2-64.4zM554.1 163c34.2-41.9 58.5-100.3 58.5-158.7 0-8.1-.6-16.3-2-23.8C554.5 3.4 467.2 49.8 417 113.1c-30.8 37.5-61.5 95.2-61.5 154.9 0 9 1.5 17.9 2.2 20.8 3.5.6 9.3 1.3 15.1 1.3 51.5 0 130.3-44.9 181.3-126.1z'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 814 1000'%3E%3Cpath d='M788.1 340.9c-5.8 4.5-108.2 62.2-108.2 190.5 0 148.4 130.3 200.9 134.2 202.2-.6 3.2-20.7 71.9-68.7 141.9-42.8 61.6-87.5 123.1-155.5 123.1s-85.5-39.5-164-39.5c-76 0-103.7 40.8-165.9 40.8s-105-42.4-150.3-107.9C27.8 743.2 0 651.1 0 563.4c0-249.8 175.6-381.4 348.3-381.4 92.4 0 169.7 60.8 227.6 60.8 54.7 0 140.5-64.4 244.2-64.4zM554.1 163c34.2-41.9 58.5-100.3 58.5-158.7 0-8.1-.6-16.3-2-23.8C554.5 3.4 467.2 49.8 417 113.1c-30.8 37.5-61.5 95.2-61.5 154.9 0 9 1.5 17.9 2.2 20.8 3.5.6 9.3 1.3 15.1 1.3 51.5 0 130.3-44.9 181.3-126.1z'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+  opacity: 0.85;
+  flex-shrink: 0;
 }
-
 .menu-items {
   display: flex;
-  gap: 4px;
+  gap: 18px;
 }
-
 .menu-items span {
+  color: rgba(255, 255, 255, 0.85);
   font-size: 13px;
-  padding: 0 6px;
-  cursor: pointer;
+  cursor: default;
+  padding: 2px 6px;
   border-radius: 4px;
+  transition: background 0.15s;
 }
-
 .menu-items span:hover {
-  background: rgba(0, 0, 0, 0.08);
+  background: rgba(255, 255, 255, 0.12);
 }
 
-/* ============================================
-   DESKTOP
-   ============================================ */
+/* ── Desktop ── */
 .desktop {
-  position: fixed;
-  top: 24px;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  height: calc(100vh - 28px);
+  position: relative;
+  background:
+    radial-gradient(
+      ellipse at 20% 50%,
+      rgba(120, 80, 200, 0.25) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 80% 20%,
+      rgba(60, 120, 220, 0.2) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 60% 80%,
+      rgba(200, 80, 120, 0.15) 0%,
+      transparent 50%
+    ),
+    #0f0f1a;
 }
 
-/* ============================================
-   FOLDER ICON
-   Positioned top-right like macOS
-   ============================================ */
-.about-me {
+/* ── Folder Icons ── */
+.folder-icon {
   position: absolute;
-  top: 20px;
-  right: 24px;
-}
-
-.assingment-1 {
-  position: absolute;
-  top: 120px;
-  right: 24px;
-}
-
-.folder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  width: 80px;
-  padding: 8px 6px;
-  border-radius: 8px;
+  gap: 4px;
   cursor: pointer;
-  text-align: center;
-  font-size: 12px;
-  color: rgb(80, 80, 80);
+  padding: 8px;
+  border-radius: 8px;
   transition: background 0.15s;
+  width: 90px;
+}
+.folder-icon:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+.folder-icon.selected {
+  background: rgba(100, 150, 255, 0.2);
+}
+.folder-icon img {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+.folder-icon .folder-emoji {
+  font-size: 48px;
+  line-height: 1;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.5));
+}
+.folder-icon p {
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+  word-break: break-word;
 }
 
-.folder img {
-  width: 64px;
-  height: auto;
-  transition: opacity 0.15s;
-}
-
-.folder:hover img {
-  opacity: 0.75;
-}
-
-.folder p {
-  margin: 0;
-  font-size: 10px;
-}
-
-/* ============================================
-   FINDER WINDOW
-   ============================================ */
+/* ── Finder Window ── */
 .finder-window {
-  display: none;
-  position: fixed;
+  position: absolute;
   top: 80px;
   left: 50%;
   transform: translateX(-50%);
-  width: 600px;
-  height: 380px;
-  background: rgba(236, 236, 236, 0.98);
-  border-radius: 10px;
-  border: 0.5px solid rgba(0, 0, 0, 0.25);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-  overflow: hidden;
+  width: 720px;
+  min-width: 500px;
+  height: 480px;
+  background: rgba(28, 28, 38, 0.97);
+  border-radius: 12px;
+  box-shadow:
+    0 32px 80px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  display: none;
   flex-direction: column;
-  z-index: 200;
+  overflow: hidden;
+  backdrop-filter: blur(40px);
+  z-index: 100;
 }
-
 .finder-window.open {
   display: flex;
 }
 
-.finder-window.hide {
-  display: none;
-}
-
-/* Title Bar */
+/* Title bar */
 .titlebar {
-  height: 38px;
-  background: rgba(210, 210, 210, 0.98);
+  height: 44px;
+  background: rgba(40, 40, 56, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
   display: flex;
   align-items: center;
-  padding: 0 12px;
-  gap: 8px;
-  border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
+  padding: 0 14px;
   cursor: grab;
   flex-shrink: 0;
+  position: relative;
 }
-
 .titlebar:active {
   cursor: grabbing;
 }
-
-/* Traffic Lights */
 .traffic-lights {
   display: flex;
   gap: 7px;
+  z-index: 1;
 }
-
 .tl {
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
   cursor: pointer;
-  border: 0.5px solid rgba(0, 0, 0, 0.15);
   transition: filter 0.15s;
 }
-
 .tl:hover {
-  filter: brightness(0.82);
+  filter: brightness(0.8);
 }
 .tl-red {
   background: #ff5f57;
@@ -186,18 +171,19 @@ a {
   background: #ffbd2e;
 }
 .tl-green {
-  background: #28ca41;
+  background: #28c840;
 }
-
 .win-title {
-  flex: 1;
-  text-align: center;
-  font-size: 12px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 13px;
   font-weight: 500;
-  color: #333;
+  pointer-events: none;
 }
 
-/* Window Body */
+/* Window body */
 .win-body {
   display: flex;
   flex: 1;
@@ -206,112 +192,141 @@ a {
 
 /* Sidebar */
 .sidebar {
-  width: 150px;
-  background: rgba(215, 215, 215, 0.9);
-  padding: 8px 0;
-  border-right: 0.5px solid rgba(0, 0, 0, 0.1);
+  width: 180px;
+  background: rgba(22, 22, 32, 0.8);
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px 0;
+  overflow-y: auto;
   flex-shrink: 0;
 }
-
-.sidebar-head {
-  padding: 6px 12px 4px;
+.sidebar-section-title {
+  color: rgba(255, 255, 255, 0.3);
   font-size: 10px;
   font-weight: 600;
-  color: #888;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  padding: 6px 14px 4px;
+  margin-top: 4px;
 }
-
 .sidebar-row {
   display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 5px 12px;
-  margin: 1px 4px;
-  font-size: 12px;
-  color: #333;
-  border-radius: 6px;
+  gap: 8px;
+  padding: 6px 14px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 13px;
   cursor: pointer;
-  transition: background 0.1s;
+  border-radius: 6px;
+  margin: 1px 6px;
+  transition:
+    background 0.12s,
+    color 0.12s;
 }
-
 .sidebar-row:hover {
-  background: rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.9);
 }
 .sidebar-row.active {
-  background: rgba(100, 150, 255, 0.25);
+  background: rgba(80, 130, 255, 0.25);
+  color: white;
+}
+.sidebar-row .row-icon {
+  font-size: 15px;
+  flex-shrink: 0;
 }
 
-/* Content Area */
-.win-content {
+/* Content area */
+.win-content-wrap {
   flex: 1;
-  padding: 20px 24px;
   overflow-y: auto;
-  user-select: text;
+  position: relative;
+}
+.tab-content {
+  display: none;
+  padding: 24px 28px;
+  color: rgba(255, 255, 255, 0.85);
+  animation: fadeIn 0.2s ease;
+}
+.tab-content.active {
+  display: block;
 }
 
-.win-content h2 {
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Content typography */
+.tab-content h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 12px;
+}
+.tab-content h3 {
   font-size: 15px;
   font-weight: 600;
-  color: #111;
-  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 18px 0 8px;
 }
-
-.win-content p {
-  font-size: 13px;
-  color: #222;
-  line-height: 1.7;
+.tab-content p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 10px;
 }
-
-.win-content a {
-  display: inline-block;
-  margin-top: 6px;
+.tab-content ul {
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+.tab-content li {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 4px;
+}
+.tab-content a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #5fa8ff;
   font-size: 13px;
-  color: #0066cc;
   text-decoration: none;
+  padding: 6px 10px;
+  background: rgba(80, 130, 255, 0.1);
+  border-radius: 6px;
+  border: 1px solid rgba(80, 130, 255, 0.2);
+  margin: 4px 0;
+  transition:
+    background 0.15s,
+    border-color 0.15s;
+}
+.tab-content a:hover {
+  background: rgba(80, 130, 255, 0.2);
+  border-color: rgba(80, 130, 255, 0.4);
+}
+.links-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
 }
 
-.win-content a:hover {
-  text-decoration: underline;
-}
-
-/* Status Bar */
+/* Status bar */
 .win-statusbar {
-  height: 22px;
-  background: rgba(210, 210, 210, 0.9);
-  border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+  height: 24px;
+  background: rgba(22, 22, 32, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 10px;
-  color: #888;
+  padding: 0 14px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 11px;
   flex-shrink: 0;
-}
-
-.win-content ul {
-  list-style: none;
-  padding: 0;
-  margin: 12px 0;
-}
-
-.win-content ul li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  padding-top: 5px;
-  font-size: 13px;
-  color: #222;
-}
-
-.win-content ul li::before {
-  content: "•";
-  color: #5b9cf6;
-  font-size: 18px;
-  line-height: 1.3;
-  flex-shrink: 0;
-}
-
-.win-content ul li p {
-  margin: 0;
 }

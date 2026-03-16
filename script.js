@@ -1,16 +1,9 @@
-function selectFolder() {
-  document
-    .getElementById("folder-1")
-    .parentElement.closest(".folder").style.background =
-    "rgba(100,150,255,0.25)";
-}
-
+// --------------------------------------------------
 // To open and close the window
+// --------------------------------------------------
+
 const closeBtn = document.querySelector("#close-btn");
 console.log(closeBtn);
-
-const win = document.getElementById("finder-win");
-console.log(win);
 
 function openWindow() {
   win.classList.add("open");
@@ -19,16 +12,40 @@ function openWindow() {
 function closeWindow() {
   win.classList.remove("open");
 }
+
 closeBtn.addEventListener("click", closeWindow);
 
+// --------------------------------------------------
 // Select Folder
-const aboutMeContent = document.querySelector("#about-me-content");
-const aboutMeFile = document.querySelector("#folder-1");
+// --------------------------------------------------
 
-aboutMeFile.addEventListener("click", openWindow);
+// About Me
+
+const aboutMeContent = document.querySelector("#about-me-content");
+const aboutMeFile = document.querySelector("#about-me-file");
+const aboutMetitle = document.querySelector("#about-me-title");
+
+aboutMeFile.addEventListener("click", () => {
+  win.classList.add("open");
+  aboutMeContent.classList.remove("hidden");
+  aboutMetitle.classList.add("active");
+  console.log("yes");
+});
+
+// Assignment 1
+
+const ass1Content = document.querySelector("#ass-1-content");
+const ass1File = document.querySelector("#ass-1-file");
+const ass1title = document.querySelector("#ass-1-title");
+
+ass1File.addEventListener("click", () => {
+  win.classList.add("open");
+  ass1Content.classList.remove("hidden");
+  ass1title.classList.add("active");
+});
 
 // Drag the window by its titlebar
-// const win = document.getElementById("finder-win");
+const win = document.getElementById("finder-win");
 const bar = document.getElementById("win-titlebar");
 let dx,
   dy,
