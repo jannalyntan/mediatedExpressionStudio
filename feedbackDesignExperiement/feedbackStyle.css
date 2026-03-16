@@ -1,0 +1,37 @@
+body {
+  text-align: center;
+  background-color: white;
+  transition: background-color 0.5s ease;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  min-height: 100vh; /* Makes the container at least the full height of the viewport */
+}
+
+dialog {
+  padding: 200px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#play-btn {
+  width: 5rem;
+}
+
+#play-btn:hover {
+  cursor: no-drop;
+  transition:
+    ease-out 0.5s,
+    width 1s linear;
+}
+
+#play-btn::before {
+  width: 30rem;
+}
+
+#play-btn:active {
+  width: 30rem;
+}

@@ -4,6 +4,8 @@ console.log(introDialog);
 const introDialogClose = document.querySelector("#dialog-close-btn");
 
 const playBtn = document.querySelector("#play-btn");
+
+const text = document.querySelector("#header");
 // Intro Dialog Setup
 
 introDialog.showModal();
@@ -27,11 +29,14 @@ function playNote() {
 playBtn.addEventListener("click", playNote);
 
 function startNote() {
-  synth.triggerAttack("C4", "8n");
+  synth.triggerAttack("C4");
+  document.body.style.backgroundColor = "blue";
+  text.style.color = "white";
 }
 
 function endNote() {
   synth.triggerRelease();
+  document.body.style.backgroundColor = "white";
 }
 
 playBtn.addEventListener("mousedown", startNote);
