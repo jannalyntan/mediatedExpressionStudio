@@ -5,16 +5,30 @@ function selectFolder() {
     "rgba(100,150,255,0.25)";
 }
 
+// To open and close the window
+const closeBtn = document.querySelector("#close-btn");
+console.log(closeBtn);
+
+const win = document.getElementById("finder-win");
+console.log(win);
+
 function openWindow() {
-  document.getElementById("finder-win").classList.add("open");
+  win.classList.add("open");
 }
 
 function closeWindow() {
-  document.getElementById("finder-win").classList.remove("open");
+  win.classList.remove("open");
 }
+closeBtn.addEventListener("click", closeWindow);
+
+// Select Folder
+const aboutMeContent = document.querySelector("#about-me-content");
+const aboutMeFile = document.querySelector("#folder-1");
+
+aboutMeFile.addEventListener("click", openWindow);
 
 // Drag the window by its titlebar
-const win = document.getElementById("finder-win");
+// const win = document.getElementById("finder-win");
 const bar = document.getElementById("win-titlebar");
 let dx,
   dy,

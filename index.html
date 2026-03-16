@@ -26,10 +26,17 @@
           <p style="margin: 0px">About Me</p>
         </div>
       </section>
+
+      <section class="assingment-1">
+        <div class="folder" ondblclick="openWindow()" onclick="selectFolder()">
+          <img src="img/Folder.png" alt="folder-1" id="folder-2" />
+          <p style="margin: 0px">Assignment 1</p>
+        </div>
+      </section>
     </div>
 
     <!-- Finder Window -->
-    <div class="finder-window open" id="finder-win">
+    <div class="finder-window" id="finder-win">
       <div class="titlebar" id="win-titlebar">
         <div class="traffic-lights">
           <div class="tl tl-red" id="close-btn"></div>
@@ -42,8 +49,9 @@
         <div class="sidebar">
           <div class="sidebar-head">Favourites</div>
           <div class="sidebar-row active">👻 About Me</div>
+          <div class="sidebar-row">🗂️ Assignment 1</div>
         </div>
-        <div class="win-content">
+        <div class="win-content" id="about-me-con">
           <h2>Hello, I'm Jannalyn!</h2>
           <p style="font-size: 14px">
             I grew up in Singapore but moved to Melbourne in 2024 to further my
@@ -70,7 +78,7 @@
           >
         </div>
       </div>
-      <div class="win-statusbar">1 item</div>
+      <div class="win-statusbar">item</div>
     </div>
 
     <script src="script.js"></script>
