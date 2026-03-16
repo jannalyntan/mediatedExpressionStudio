@@ -3,41 +3,76 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-<link rel="stylesheet" href="style.css">
-
-
     <title>Mediated Expression Studio</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- good for navigation bar -->
-    <main>
-      <h1>Mediated Expression Studio</h1>
+    <!-- Top menu bar -->
+    <div class="menu-bar">
+      <div class="apple-logo"></div>
+      <div class="menu-items">
+        <span>File</span>
+        <span>Edit</span>
+        <span>View</span>
+        <span>Help</span>
+      </div>
+    </div>
 
-      <section>
-        <h3>Introduction Excerise</h3>
-
-        <p>
-          Hello, I'm Jannalyn! I grew up in Singapore but moved to Melbourne 2
-          in 2024 to further my studies. The reason I was interested in studying
-          digital media is because I am interested in learning about UX/UI
-          design.
-          <br />
-          <br />
-          My favourite emoji is 🥲!
-          <br />
-          <br />
-          My favourite expression software is probably After Effects, Premiere
-          Pro and Illustrator. I have done some coding before primarily with
-          HTML, CSS, JS and a bit of Xcode as well.
-        </p>
-
-        <a
-          href="https://github.com/jannalyntan/mediatedExpressionStudio"
-          target="_blank"
-          >Link to my github!</a
-        >
+    <!-- Desktop -->
+    <div class="desktop">
+      <section class="about-me">
+        <div class="folder" ondblclick="openWindow()" onclick="selectFolder()">
+          <img src="img/Folder.png" alt="folder-1" id="folder-1" />
+          <p style="margin: 0px">About Me</p>
+        </div>
       </section>
-    </main>
+    </div>
+
+    <!-- Finder Window -->
+    <div class="finder-window open" id="finder-win">
+      <div class="titlebar" id="win-titlebar">
+        <div class="traffic-lights">
+          <div class="tl tl-red" id="close-btn"></div>
+          <div class="tl tl-yellow"></div>
+          <div class="tl tl-green"></div>
+        </div>
+        <div class="win-title">About Me</div>
+      </div>
+      <div class="win-body">
+        <div class="sidebar">
+          <div class="sidebar-head">Favourites</div>
+          <div class="sidebar-row active">👻 About Me</div>
+        </div>
+        <div class="win-content">
+          <h2>Hello, I'm Jannalyn!</h2>
+          <p style="font-size: 14px">
+            I grew up in Singapore but moved to Melbourne in 2024 to further my
+            studies at RMIT, where I'm focusing on digital media specifically,
+            UX/UI design.
+          </p>
+          <ul>
+            <li>
+              <p>My favourite emoji is 🥲</p>
+            </li>
+            <li>
+              <p>
+                My go-to software is After Effects, Premiere Pro and
+                Illustrator. I've also coded in HTML, CSS, JS and a bit of
+                Xcode.
+              </p>
+            </li>
+          </ul>
+
+          <a
+            href="https://github.com/jannalyntan/mediatedExpressionStudio"
+            target="_blank"
+            >🔗 Link to my GitHub</a
+          >
+        </div>
+      </div>
+      <div class="win-statusbar">1 item</div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

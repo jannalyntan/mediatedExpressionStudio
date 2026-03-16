@@ -1,3 +1,307 @@
-body{
-    
+/* ============================================
+   BASE
+   ============================================ */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: url("desktop-background.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* ============================================
+   MENU BAR
+   ============================================ */
+.menu-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  z-index: 300;
+}
+
+.apple-logo {
+  font-size: 16px;
+}
+
+.menu-items {
+  display: flex;
+  gap: 4px;
+}
+
+.menu-items span {
+  font-size: 13px;
+  padding: 0 6px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.menu-items span:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* ============================================
+   DESKTOP
+   ============================================ */
+.desktop {
+  position: fixed;
+  top: 24px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+/* ============================================
+   FOLDER ICON
+   Positioned top-right like macOS
+   ============================================ */
+.about-me {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+}
+
+.folder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 80px;
+  padding: 8px 6px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 12px;
+  color: rgb(80, 80, 80);
+  transition: background 0.15s;
+}
+
+.folder img {
+  width: 64px;
+  height: auto;
+  transition: opacity 0.15s;
+}
+
+.folder:hover img {
+  opacity: 0.75;
+}
+
+.folder p {
+  margin: 0;
+  font-size: 12px;
+}
+
+/* ============================================
+   FINDER WINDOW
+   ============================================ */
+.finder-window {
+  display: none;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 380px;
+  background: rgba(236, 236, 236, 0.98);
+  border-radius: 10px;
+  border: 0.5px solid rgba(0, 0, 0, 0.25);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  flex-direction: column;
+  z-index: 200;
+}
+
+.finder-window.open {
+  display: flex;
+}
+
+/* Title Bar */
+.titlebar {
+  height: 38px;
+  background: rgba(210, 210, 210, 0.98);
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 8px;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
+  cursor: grab;
+  flex-shrink: 0;
+}
+
+.titlebar:active {
+  cursor: grabbing;
+}
+
+/* Traffic Lights */
+.traffic-lights {
+  display: flex;
+  gap: 7px;
+}
+
+.tl {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  transition: filter 0.15s;
+}
+
+.tl:hover {
+  filter: brightness(0.82);
+}
+.tl-red {
+  background: #ff5f57;
+}
+.tl-yellow {
+  background: #ffbd2e;
+}
+.tl-green {
+  background: #28ca41;
+}
+
+.win-title {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Window Body */
+.win-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 150px;
+  background: rgba(215, 215, 215, 0.9);
+  padding: 8px 0;
+  border-right: 0.5px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.sidebar-head {
+  padding: 6px 12px 4px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #888;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.sidebar-row {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 5px 12px;
+  margin: 1px 4px;
+  font-size: 12px;
+  color: #333;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.sidebar-row:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+.sidebar-row.active {
+  background: rgba(100, 150, 255, 0.25);
+}
+
+/* Content Area */
+.win-content {
+  flex: 1;
+  padding: 20px 24px;
+  overflow-y: auto;
+  user-select: text;
+}
+
+.win-content h2 {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+.win-content p {
+  font-size: 13px;
+  color: #222;
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+.win-content a {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.win-content a:hover {
+  text-decoration: underline;
+}
+
+/* Status Bar */
+.win-statusbar {
+  height: 22px;
+  background: rgba(210, 210, 210, 0.9);
+  border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.win-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+}
+
+.win-content ul li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding-top: 5px;
+  font-size: 13px;
+  color: #222;
+}
+
+.win-content ul li::before {
+  content: "•";
+  color: #5b9cf6;
+  font-size: 18px;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+.win-content ul li p {
+  margin: 0;
 }
