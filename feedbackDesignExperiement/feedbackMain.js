@@ -6,6 +6,7 @@ const introDialogClose = document.querySelector("#dialog-close-btn");
 const playBtn = document.querySelector("#play-btn");
 
 const text = document.querySelector("#header");
+const stopText = document.querySelector("#stop-text");
 // Intro Dialog Setup
 
 introDialog.showModal();
@@ -32,11 +33,18 @@ function startNote() {
   synth.triggerAttack("C4");
   document.body.style.backgroundColor = "blue";
   text.style.color = "white";
+
+  setTimeout(() => {
+    stopText.classList.remove("hidden");
+    synth.triggerAttack("C6");
+  }, 2000);
 }
 
 function endNote() {
   synth.triggerRelease();
   document.body.style.backgroundColor = "white";
+  text.style.color = "blue";
+  stopText.classList.add("hidden");
 }
 
 playBtn.addEventListener("mousedown", startNote);
