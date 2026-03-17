@@ -1,0 +1,338 @@
+/* ============================================
+   BASE
+   ============================================ */
+
+body {
+  font-family: "Barriecito", system-ui;
+}
+
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h1,
+h2,
+h3 {
+  color: #535923;
+  font-family: "Barriecito", system-ui;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  scale: 1.25;
+  background-color: #5359231a;
+  border-radius: 15px;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.sidebyside {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebyside2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.left {
+  text-align: left;
+  align-items: left;
+  margin-left: 10%;
+}
+
+.right {
+  align-items: right;
+  text-align: right;
+  margin-right: 10%;
+}
+
+.subtext {
+  font-size: smaller;
+  font-style: italic;
+}
+
+/* ============================================
+   BUTTONS
+   ============================================ */
+
+button {
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+  color: #535923;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+button:hover {
+  color: black;
+  scale: 1.1;
+}
+
+.links {
+  color: white;
+  background-color: #555a34;
+  border-radius: 15px;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+  border: none;
+  cursor: pointer;
+  margin-top: -30px;
+  margin-bottom: 40px;
+}
+
+.links:hover {
+  color: white;
+  scale: 1.1;
+}
+
+/* ============================================
+   SECTIONS — Heading & Ending
+   (shared layout, only height differs)
+   ============================================ */
+
+#heading,
+#ending {
+  width: 100vw;
+  background-image: url(images/background-texture.png);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#heading {
+  height: 100vh;
+}
+
+#ending {
+  height: 30vh;
+  margin-top: 100px;
+  position: relative;
+}
+
+/* buttons inside heading and ending */
+#heading button,
+#ending button {
+  color: white;
+  background-color: #535923;
+  border-radius: 15px;
+  padding: 15px 25px;
+}
+
+#heading button:hover,
+#ending button:hover {
+  color: white;
+  scale: 1.1;
+}
+
+#heading .sidebyside,
+#ending .sidebyside {
+  justify-content: center;
+}
+
+#name {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* ============================================
+   SECTIONS — Summary
+   ============================================ */
+
+#summary {
+  background-color: #535923;
+  padding: 50px;
+  margin: 50px 10% 0;
+  border-radius: 15px;
+  color: white;
+}
+
+#summary h1 {
+  font-size: 50px;
+}
+
+#summary p {
+  text-align: right;
+}
+
+/* ============================================
+   COMPONENTS
+   ============================================ */
+
+/* --- Coloured background strip --- */
+.backgroundcolour {
+  background-color: #5359232e;
+  margin-top: 50px;
+  padding: 100px 0px 100px 0px;
+}
+
+/* --- Texture cards
+     .background, .background1, .background2 share most styles
+     only width/height/colour differs
+   --- */
+.background,
+.background1,
+.background2 {
+  background-image: url(images/background-texture.png);
+  border-radius: 15px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.background {
+  width: 400px;
+  height: 200px;
+}
+.background1 {
+  width: 400px;
+  height: 100px;
+  color: white;
+}
+.background2 {
+  width: 600px;
+  height: 200px;
+}
+
+/* --- Coloured card --- */
+.colouredBg {
+  background-color: #5359231a;
+  padding: 50px;
+  border-radius: 15px;
+  color: white;
+}
+
+/* --- Hover reveal cards --- */
+.hoverover {
+  color: white;
+  border-radius: 5px;
+  width: 550px;
+  height: 325px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.hoverover:hover {
+  background-color: #535923;
+  border-radius: 10px;
+}
+
+.hoverover:hover img {
+  display: none;
+}
+
+.hoverover:after {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+  content: attr(data-hover);
+  font-size: 16px;
+  padding: 30px;
+  text-align: center;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+  border-radius: 15px;
+}
+
+.hoverover:hover:after {
+  opacity: 1;
+}
+
+/* ============================================
+   SECTION HEADINGS
+   ============================================ */
+
+#projectSpeculation,
+#inspiration {
+  font-size: 180px;
+  color: #535923;
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background-color: #5f6833;
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#backToTopBtn:hover {
+  background-color: #7e8b44;
+}
+
+#backToTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 3</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barriecito&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Intel+One+Mono:ital,wght@0,300..700;1,300..700&family=Lexend:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assignment1.css" />
+
+    <!-- Scripts -->
+    <script src="assignment1.js" defer></script>
+  </head>
+
+  <body>
+    <section class="content">
+      <div id="heading">
+        <h1 style="font-size: 180px; margin-top: -20px; color: white">
+          Assignment 1
+        </h1>
+
+        <p style="margin-top: -100px">skip to</p>
+        <div class="sidebyside">
+          <button class="project" id="designValuesBtn">design values.</button>
+          <button class="project" id="uiBtn">ui design.</button>
+          <button class="project" id="designProcessBtn">design process.</button>
+          <button class="project" id="timelineBtn">timeline.</button>
+          <button class="project" id="proudBtn">most proud.</button>
+          <button class="project" id="challengingBtn">most challenging.</button>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- Introduction --------------------------------------------------->
+      <!------------------------------------------------------------------->
+      <h1 id="projectSpeculation">Project <br />Speculation</h1>
+
+      <div class="sidebyside">
+        <div class="left">
+          <p style="margin-left: -1px">
+            My project is inspired by a simple childhood toy: wooden building
+            blocks. These toys represent an early experience of creativity,
+            where children can build and imagine freely using a small set of
+            simple materials. With only a few blocks, children can create
+            castles, towers, cars, and other imaginative structures.
+            <br /><br />
+            This sense of limitless creativity forms the foundation of the
+            project. The project expands on this idea by exploring how childhood
+            play can be translated into sound through interactive digital
+            design. By transforming the act of building with blocks into a
+            sound-generating system, the tool allows users to explore how visual
+            creativity can produce playful musical patterns.
+          </p>
+        </div>
+        <div class="right">
+          <img
+            src="images/RandomRipple.png"
+            alt="code-1"
+            style="width: 750px"
+          />
+        </div>
+      </div>
+      <p>
+        <br /><br />The design of the tool is guided by 2 interaction design
+        principles.
+      </p>
+
+      <div class="sidebyside2">
+        <div class="background">
+          <h3 style="color: white">1. Mapping</h3>
+          <p>
+            Using the visual properties of the blocks, such as their shape or
+            position, to influence specific sounds or musical elements, allowing
+            users to hear how their visual arrangements shape the resulting
+            composition.
+          </p>
+        </div>
+
+        <div class="background">
+          <h3 style="color: white">2. Feedback</h3>
+          <p>
+            Using the system responds to the user’s actions through both visual
+            animations and sound, allowing users to immediately hear and see the
+            results of their interactions.
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- Purpose --------------------------------------------------->
+      <!------------------------------------------------------------------->
+
+      <div class="sidebyside" style="margin-top: 100px">
+        <div class="left">
+          <img src="images/webpage-1.png" alt="code-1" style="height: 400px" />
+        </div>
+        <div class="right">
+          <h2>Purpose</h2>
+          <p style="margin-right: -1px">
+            The purpose of this project is to provide users with a simple
+            interactive tool where they can build structures using digital
+            blocks and transform those constructions into sound. By dragging and
+            arranging blocks on the screen, users are able to experiment with
+            how different shapes and positions influence the sounds that are
+            produced.
+            <br /><br />
+            The end goal of the tool is to allow users to create playful sound
+            compositions through visual construction. Rather than focusing on
+            producing perfect or professional music, the tool encourages users
+            to explore, experiment, and enjoy the creative process through
+            simple and intuitive interaction.
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- Worth --------------------------------------------------->
+      <!------------------------------------------------------------------->
+
+      <div class="sidebyside" style="margin-top: 100px">
+        <div class="left">
+          <h2>Worth</h2>
+          <p style="margin-left: -1px">
+            The worth of this project lies in its ability to reconnect users
+            with the playful and imaginative mindset often associated with
+            childhood. Many people grow up using simple toys such as building
+            blocks to explore creativity without rules or expectations. This
+            project aims to bring back that sense of freedom and curiosity
+            through an interactive digital experience.
+            <br /><br />
+            Using the style and colours to make the website feel bright,
+            playful, and light-hearted. Through colourful blocks, simple
+            interactions, and toy-like sounds, the tool creates an environment
+            that encourages users to experiment and have fun. The experience
+            focuses less on technical skill and more on the joy of discovery.
+            <br /><br />
+
+            In doing so, the project highlights how interactive digital tools
+            can recreate moments of play and imagination, allowing users to take
+            a small break from everyday pressures while engaging in a simple and
+            creative activity.
+          </p>
+        </div>
+        <div class="right">
+          <img src="images/webpage-2.png" alt="code-1" style="width: 750px" />
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- Framing --------------------------------------------------->
+      <!------------------------------------------------------------------->
+      <div class="backgroundcolour">
+        <h2 style="font-size: 3rem">Framing</h2>
+        <p>
+          This project will be developed using HTML, CSS, and JavaScript, with
+          the audio component supported by Tone.js. Tone.js enables the tool to
+          generate playful, toy-like sounds that respond dynamically to user
+          interactions.
+        </p>
+        <div class="sidebyside" style="margin-top: 100px">
+          <div class="left">
+            <img
+              src="images/webpage-1.png"
+              alt="code-1"
+              style="height: 400px"
+            />
+          </div>
+          <div class="right">
+            <p style="margin-right: -1px">
+              Users will drag and place digital blocks onto the interface to
+              build structures. Each block represents a sound element, such as a
+              bell tone, drum hit, or melodic note, while the block’s position
+              influences qualities like pitch or tone. In this way, the spatial
+              arrangement of blocks shapes the resulting sound composition.
+            </p>
+          </div>
+        </div>
+
+        <div class="sidebyside" style="margin-top: 100px">
+          <div class="left">
+            <p style="margin-left: -1px">
+              Sound playback may occur through a looping sequence or a play
+              function after the user completes their structure, with the final
+              method determined through experimentation. This system allows
+              users to explore how visual construction can translate into sound.
+              <br /><br />
+              The interaction demonstrates key design principles such as
+              mapping, where block properties correspond to musical elements,
+              and feedback, where visual and audio responses immediately reflect
+              the user’s actions.
+            </p>
+          </div>
+          <div class="right">
+            <img src="images/webpage-2.png" alt="code-1" style="width: 750px" />
+          </div>
+        </div>
+      </div>
+      <!------------------------------------------------------------------->
+      <!-- Inspiration-------------------------------------------------------->
+      <!------------------------------------------------------------------->
+
+      <h1 id="inspiration">Inspiration</h1>
+
+      <h2 id="musicalText">Musical Text Editor</h2>
+      <button
+        class="links"
+        data-url="https://yirggzmb.itch.io/musical-text-editor"
+      >
+        link to website
+      </button>
+      <div class="sidebyside" style="margin-top: 10px">
+        <div class="left">
+          <p style="margin-left: -1px">
+            Similar to my project, this tool maps a visual input to sound. In
+            this case, each letter typed into the editor is mapped to a musical
+            tone, allowing users to generate a sound composition through writing
+            text. My project follows a similar principle, but instead of mapping
+            letters to sounds, it maps blocks to sound elements.
+            <br /><br />
+            Conceptually, both projects explore how simple and familiar tools
+            can be transformed into creative sound-making systems. The Musical
+            Text Editor demonstrates how an everyday interaction, such as
+            typing, can become a playful method of composing sound. This
+            emphasis on simplicity and accessibility aligns with my project’s
+            intention of encouraging exploration and experimentation.
+            <br /><br />
+            The tool also highlights the importance of curiosity and discovery.
+            By allowing users to experiment freely with letters, the project
+            invites playful interaction while keeping the interface
+            light-hearted and approachable. This approach influenced my
+            project’s direction, particularly the idea that a simple interaction
+            system can encourage users to explore creativity without requiring
+            prior musical knowledge.
+          </p>
+        </div>
+        <div class="right">
+          <img src="images/webpage-2.png" alt="code-1" style="width: 750px" />
+        </div>
+      </div>
+
+      <h2 id="musicalText">Patatap</h2>
+      <button class="links" data-url="https://www.patatap.com/">
+        link to website
+      </button>
+      <div class="sidebyside" style="margin-top: 10px">
+        <div class="left">
+          <img src="images/webpage-2.png" alt="code-1" style="width: 750px" />
+        </div>
+        <div class="right">
+          <p style="margin-right: -1px">
+            Patatap is an interactive audiovisual tool that maps keyboard inputs
+            to different sounds and visual animations. Each key on the keyboard
+            triggers a unique combination of colour, movement, and sound,
+            creating an expressive and playful experience for the user.
+            <br /><br />
+            The bright colours and dynamic visuals of Patatap helped inspire the
+            visual direction of my project. Keeping the colours bright to
+            attract users hence leading me to thinking of a children's toy. The
+            tool demonstrates how strong visual feedback can enhance user
+            interaction, making each input feel responsive and engaging. This
+            connection between user action and audiovisual response is an
+            important element that I aim to incorporate into my own project.
+            <br /><br />
+            Another key aspect of Patatap is the freedom it offers users to
+            experiment without strict rules or objectives. Users can freely
+            press keys to generate sounds and visuals, allowing them to create
+            unique audiovisual compositions through exploration. This sense of
+            open-ended play strongly relates to my project’s concept of
+            recreating childhood creativity, where users are encouraged to
+            experiment and build freely using simple tools.
+          </p>
+        </div>
+      </div>
+
+      <!------------------------------------------------------------------->
+      <!-- Found Example-------------------------------------------------------->
+      <!------------------------------------------------------------------->
+
+      <section class="backgroundcolour">
+        <h2 id="musicalText">Incredibox</h2>
+        <button
+          class="links"
+          data-url="https://yirggzmb.itch.io/musical-text-editor"
+        >
+          link to website
+        </button>
+        <div class="sidebyside">
+          <div class="left">
+            <p style="margin-left: -1px">
+              Similar to my project, this tool maps a visual input to sound. In
+              this case, each letter typed into the editor is mapped to a
+              musical tone, allowing users to generate a sound composition
+              through writing text. My project follows a similar principle, but
+              instead of mapping letters to sounds, it maps blocks to sound
+              elements.
+              <br /><br />
+              Conceptually, both projects explore how simple and familiar tools
+              can be transformed into creative sound-making systems. The Musical
+              Text Editor demonstrates how an everyday interaction, such as
+              typing, can become a playful method of composing sound. This
+              emphasis on simplicity and accessibility aligns with my project’s
+              intention of encouraging exploration and experimentation.
+              <br /><br />
+              The tool also highlights the importance of curiosity and
+              discovery. By allowing users to experiment freely with letters,
+              the project invites playful interaction while keeping the
+              interface light-hearted and approachable. This approach influenced
+              my project’s direction, particularly the idea that a simple
+              interaction system can encourage users to explore creativity
+              without requiring prior musical knowledge.
+            </p>
+          </div>
+          <div class="right">
+            <img src="images/webpage-2.png" alt="code-1" style="width: 750px" />
+          </div>
+        </div>
+
+        <h2 id="musicalText">Patatap</h2>
+        <button class="links" data-url="https://www.patatap.com/">
+          link to website
+        </button>
+        <div class="sidebyside" style="margin-top: 10px">
+          <div class="left">
+            <img src="images/webpage-2.png" alt="code-1" style="width: 750px" />
+          </div>
+          <div class="right">
+            <p>
+              Patatap is an interactive audiovisual tool that maps keyboard
+              inputs to different sounds and visual animations. Each key on the
+              keyboard triggers a unique combination of colour, movement, and
+              sound, creating an expressive and playful experience for the user.
+              <br /><br />
+              The bright colours and dynamic visuals of Patatap helped inspire
+              the visual direction of my project. Keeping the colours bright to
+              attract users hence leading me to thinking of a children's toy.
+              The tool demonstrates how strong visual feedback can enhance user
+              interaction, making each input feel responsive and engaging. This
+              connection between user action and audiovisual response is an
+              important element that I aim to incorporate into my own project.
+              <br /><br />
+              Another key aspect of Patatap is the freedom it offers users to
+              experiment without strict rules or objectives. Users can freely
+              press keys to generate sounds and visuals, allowing them to create
+              unique audiovisual compositions through exploration. This sense of
+              open-ended play strongly relates to my project’s concept of
+              recreating childhood creativity, where users are encouraged to
+              experiment and build freely using simple tools.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div id="summary" class="sidebyside">
+        <h1 class="left" style="color: white">In Conclusion...</h1>
+        <p class="right">
+          Overall, I’m genuinely proud of this website and the process it took
+          to create it. It wasn’t easy, there were moments of uncertainty,
+          constant iteration, and technical roadblocks, but I’m glad I
+          persevered and kept refining it.
+          <br /><br />
+          If I had more time, I’d love to expand the site by introducing
+          different themes, each with its own background, colour palette, and
+          matching soundscape, to give users more ways to shape their calming
+          experience.
+          <br /><br />
+          This project taught me a lot, both technically and creatively. I’ve
+          gained a deeper understanding of how interaction, sound, and visual
+          design can work together, and I’m excited to apply these skills and
+          insights to future projects.
+        </p>
+      </div>
+
+      <button id="backTopBtn" style="margin-top: 50px">back to top.</button>
+
+      <div id="ending">
+        <p>jump back</p>
+        <div class="sidebyside">
+          <button class="project" id="designValuesBtn1">design values.</button>
+          <button class="project" id="uiBtn1">ui design.</button>
+          <button class="project" id="designProcessBtn1">
+            design process.
+          </button>
+          <button class="project" id="timelineBtn1">timeline.</button>
+          <button class="project" id="proudBtn1">most proud.</button>
+          <button class="project" id="challengingBtn1">
+            most challenging.
+          </button>
+        </div>
+
+        <p class="subtext" id="name">Jannalyn Tan- s4056775</p>
+      </div>
+    </section>
+
+    <button id="backToTopBtn" title="Back to top">↑</button>
+  </body>
+</html>
