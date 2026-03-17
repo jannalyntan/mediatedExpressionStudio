@@ -10,8 +10,15 @@
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: url("desktop-background.jpg") no-repeat center center fixed;
-  background-size: cover;
+  background: url(img/wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   height: 100vh;
   overflow: hidden;
 }
@@ -19,6 +26,10 @@ body {
 a {
   text-decoration: none;
   color: black;
+}
+
+p {
+  color: white;
 }
 
 /* ============================================
@@ -143,7 +154,6 @@ a {
 .finder-window.hide {
   display: none;
 }
-
 
 /* Title Bar */
 .titlebar {
@@ -322,6 +332,6 @@ a {
 }
 
 /* shown when active */
-.win-content.active{
+.win-content.active {
   display: block;
 }
