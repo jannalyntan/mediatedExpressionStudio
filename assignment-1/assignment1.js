@@ -45,3 +45,30 @@ backToTopBtn.addEventListener("click", () => {
     behavior: "smooth",
   });
 });
+
+// grab your colours from the CSS variables
+const root = getComputedStyle(document.documentElement);
+const colours = [
+  root.getPropertyValue("--red").trim(),
+  root.getPropertyValue("--blue").trim(),
+  root.getPropertyValue("--yellow").trim(),
+  root.getPropertyValue("--yellow-dark").trim(),
+  root.getPropertyValue("--orange").trim(),
+];
+
+function rainbowText(elementId) {
+  const el = document.getElementById(elementId);
+  const text = el.innerText;
+
+  el.innerHTML = text
+    .split("")
+    .map(
+      (letter) =>
+        `<span style="color: ${colours[Math.floor(Math.random() * colours.length)]}">${letter}</span>`,
+    )
+    .join("");
+}
+
+rainbowText("inspiration");
+rainbowText("projectSpeculation");
+rainbowText("interactive");
