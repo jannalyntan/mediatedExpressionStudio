@@ -1,69 +1,19 @@
 /* ----------------------------------- */
-/* Top Btn----------------------------- */
+/* Btn----------------------------- */
 /* ----------------------------------- */
 
-document.getElementById("designValuesBtn").addEventListener("click", () => {
-  document
-    .getElementById("designValuesCon")
-    .scrollIntoView({ behavior: "smooth" });
+document.querySelectorAll("[data-target]").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    document
+      .getElementById(btn.dataset.target)
+      .scrollIntoView({ behavior: "smooth" });
+  });
 });
 
-document.getElementById("uiBtn").addEventListener("click", () => {
-  document.getElementById("uiCon").scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("designProcessBtn").addEventListener("click", () => {
-  document
-    .getElementById("designProcessCon")
-    .scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("timelineBtn").addEventListener("click", () => {
-  document.getElementById("timelineCon").scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("proudBtn").addEventListener("click", () => {
-  document.getElementById("proudCon").scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("challengingBtn").addEventListener("click", () => {
-  document
-    .getElementById("challengingCon")
-    .scrollIntoView({ behavior: "smooth" });
-});
-
-/* ----------------------------------- */
-/* bottom Btn----------------------------- */
-/* ----------------------------------- */
-
-document.getElementById("designValuesBtn1").addEventListener("click", () => {
-  document
-    .getElementById("designValuesCon")
-    .scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("uiBtn1").addEventListener("click", () => {
-  document.getElementById("uiCon").scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("designProcessBtn1").addEventListener("click", () => {
-  document
-    .getElementById("designProcessCon")
-    .scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("timelineBtn1").addEventListener("click", () => {
-  document.getElementById("timelineCon").scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("proudBtn1").addEventListener("click", () => {
-  document.getElementById("proudCon").scrollIntoView({ behavior: "smooth" });
-});
-
-document.getElementById("challengingBtn1").addEventListener("click", () => {
-  document
-    .getElementById("challengingCon")
-    .scrollIntoView({ behavior: "smooth" });
+document.querySelectorAll(".links").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    window.open(btn.dataset.url);
+  });
 });
 
 /* ----------------------------------- */
@@ -93,15 +43,5 @@ backToTopBtn.addEventListener("click", () => {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
-  });
-});
-
-/* ----------------------------------- */
-/* UI Design----------------------------- */
-/* ----------------------------------- */
-
-document.querySelectorAll(".links").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    window.open(btn.dataset.url);
   });
 });

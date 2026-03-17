@@ -1,4 +1,31 @@
 /* ============================================
+   COLOURS — edit these to change the whole page
+   ============================================ */
+
+:root {
+  --green: #bf0436;
+  --green-dark: #03588c;
+  --green-light: #d9a404;
+  --green-hover: #d98e04;
+  --green-tint: #f2762e;
+  --green-faint: #5359231a;
+}
+
+/* Color Theme Swatches in Hex */
+/* .Young-children-enjoying-in-the-playroom-1-hex { color: #BF0436; }
+.Young-children-enjoying-in-the-playroom-2-hex { color: #03588C; }
+.Young-children-enjoying-in-the-playroom-3-hex { color: #D9A404; }
+.Young-children-enjoying-in-the-playroom-4-hex { color: #D98E04; }
+.Young-children-enjoying-in-the-playroom-5-hex { color: #F2762E; }
+
+/* Color Theme Swatches in RGBA */
+/* .Young-children-enjoying-in-the-playroom-1-rgba { color: rgba(191, 3, 53, 1); }
+.Young-children-enjoying-in-the-playroom-2-rgba { color: rgba(2, 87, 140, 1); }
+.Young-children-enjoying-in-the-playroom-3-rgba { color: rgba(216, 163, 4, 1); }
+.Young-children-enjoying-in-the-playroom-4-rgba { color: rgba(216, 142, 4, 1); }
+.Young-children-enjoying-in-the-playroom-5-rgba { color: rgba(242, 117, 46, 1); } */
+
+/* ============================================
    BASE
    ============================================ */
 
@@ -16,7 +43,7 @@ p {
 h1,
 h2,
 h3 {
-  color: #535923;
+  color: var(--green);
   font-family: "Barriecito", system-ui;
 }
 
@@ -40,7 +67,7 @@ a {
 a:hover {
   text-decoration: none;
   scale: 1.25;
-  background-color: #5359231a;
+  background-color: var(--green-faint);
   border-radius: 15px;
 }
 
@@ -104,7 +131,7 @@ button {
   font-size: 20px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: lighter;
-  color: #535923;
+  color: var(--green);
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -115,9 +142,11 @@ button:hover {
   scale: 1.1;
 }
 
-.links {
+/* shared styles for .links and .experimentsBtn */
+.links,
+.experimentsBtn {
   color: white;
-  background-color: #555a34;
+  background-color: var(--green-dark);
   border-radius: 15px;
   padding: 15px 25px;
   font-size: 20px;
@@ -125,24 +154,32 @@ button:hover {
   font-weight: lighter;
   border: none;
   cursor: pointer;
-  margin-top: -30px;
-  margin-bottom: 40px;
 }
 
-.links:hover {
+.links:hover,
+.experimentsBtn:hover {
   color: white;
   scale: 1.1;
 }
 
+/* only what's different between the two */
+.links {
+  margin-top: -30px;
+  margin-bottom: 40px;
+}
+.experimentsBtn {
+  margin-top: -100px;
+  margin-bottom: 10px;
+}
+
 /* ============================================
    SECTIONS — Heading & Ending
-   (shared layout, only height differs)
    ============================================ */
 
 #heading,
 #ending {
   width: 100vw;
-  background-image: url(images/background-texture.png);
+  background-image: url(images/background.png);
   color: white;
   display: flex;
   flex-direction: column;
@@ -161,11 +198,10 @@ button:hover {
   position: relative;
 }
 
-/* buttons inside heading and ending */
 #heading button,
 #ending button {
   color: white;
-  background-color: #535923;
+  background-color: var(--green);
   border-radius: 15px;
   padding: 15px 25px;
 }
@@ -192,7 +228,7 @@ button:hover {
    ============================================ */
 
 #summary {
-  background-color: #535923;
+  background-color: var(--green);
   padding: 50px;
   margin: 50px 10% 0;
   border-radius: 15px;
@@ -202,7 +238,6 @@ button:hover {
 #summary h1 {
   font-size: 50px;
 }
-
 #summary p {
   text-align: right;
 }
@@ -211,17 +246,12 @@ button:hover {
    COMPONENTS
    ============================================ */
 
-/* --- Coloured background strip --- */
 .backgroundcolour {
-  background-color: #5359232e;
+  background-color: var(--green-tint);
   margin-top: 50px;
-  padding: 100px 0px 100px 0px;
+  padding: 100px 0;
 }
 
-/* --- Texture cards
-     .background, .background1, .background2 share most styles
-     only width/height/colour differs
-   --- */
 .background,
 .background1,
 .background2 {
@@ -246,15 +276,14 @@ button:hover {
 }
 .background2 {
   width: 600px;
-  height: 200px;
+  height: 400px;
 }
 
-/* --- Coloured card --- */
 .colouredBg {
-  background-color: #5359231a;
+  background-color: var(--green-faint);
   padding: 50px;
   border-radius: 15px;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 /* --- Hover reveal cards --- */
@@ -270,7 +299,7 @@ button:hover {
 }
 
 .hoverover:hover {
-  background-color: #535923;
+  background-color: var(--green);
   border-radius: 10px;
 }
 
@@ -300,9 +329,10 @@ button:hover {
    ============================================ */
 
 #projectSpeculation,
-#inspiration {
+#inspiration,
+#interactive {
   font-size: 180px;
-  color: #535923;
+  color: var(--green);
 }
 
 /* ============================================
@@ -314,7 +344,7 @@ button:hover {
   bottom: 30px;
   right: 30px;
   z-index: 1000;
-  background-color: #5f6833;
+  background-color: var(--green-light);
   color: white;
   border: none;
   width: 45px;
@@ -329,7 +359,7 @@ button:hover {
 }
 
 #backToTopBtn:hover {
-  background-color: #7e8b44;
+  background-color: var(--green-hover);
 }
 
 #backToTopBtn.show {
