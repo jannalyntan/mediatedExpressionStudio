@@ -1,24 +1,38 @@
-/* ============================================
+/* --------------------------------------------
    BASE
-   ============================================ */
+  -------------------------------------------- */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Achieved the background through the linear-gradiaent trying to get it to look as similar to an apple system as possible */
+
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: url(img/wallpaper.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
+  background: linear-gradient(
+    150deg,
+    #1a3a2a 0%,
+    #2a5a3a 30%,
+    #1a4060 65%,
+    #0d1a30 100%
+  );
+  background-image:
+    radial-gradient(
+      ellipse 70% 50% at 60% 40%,
+      rgba(80, 180, 100, 0.2) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 50% 60% at 20% 70%,
+      rgba(40, 100, 160, 0.25) 0%,
+      transparent 65%
+    ),
+    linear-gradient(150deg, #1a3a2a 0%, #2a5a3a 30%, #1a4060 65%, #0d1a30 100%);
   color: white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
   height: 100vh;
   overflow: hidden;
 }
@@ -32,10 +46,12 @@ p {
   color: white;
 }
 
-/* ============================================
+/* --------------------------------------------
    MENU BAR
-   ============================================ */
+   -------------------------------------------- */
+
 .menu-bar {
+  justify-content: flex-start;
   position: fixed;
   top: 0;
   width: 100%;
@@ -48,6 +64,16 @@ p {
   gap: 16px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   z-index: 300;
+  color: black;
+}
+
+.menu-right {
+  margin-left: auto;
+  display: flex;
+  gap: 10px;
+  font-size: 12px;
+  color: #333;
+  opacity: 0.8;
 }
 
 .apple-logo {
@@ -62,17 +88,18 @@ p {
 .menu-items span {
   font-size: 13px;
   padding: 0 6px;
-  cursor: pointer;
   border-radius: 4px;
 }
+
+/* Added a hover to increase user feedback, even though the buttons don't go anymore I wanted it to look more like a Mac system. */
 
 .menu-items span:hover {
   background: rgba(0, 0, 0, 0.08);
 }
 
-/* ============================================
+/* --------------------------------------------
    DESKTOP
-   ============================================ */
+   -------------------------------------------- */
 .desktop {
   position: fixed;
   top: 24px;
@@ -81,50 +108,76 @@ p {
   bottom: 0;
 }
 
-/* ============================================
+/* --------------------------------------------
    FOLDER ICON
-   Positioned top-right like macOS
-   ============================================ */
+ -------------------------------------------- */
 .about-me {
   position: absolute;
   top: 20px;
-  right: 24px;
+  right: 10px;
 }
 
 .assingment-1 {
   position: absolute;
   top: 100px;
-  right: 24px;
+  right: 10px;
 }
 
 .folder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  width: 80px;
-  padding: 8px 6px;
-  border-radius: 8px;
-  cursor: pointer;
+  justify-content: center;
+  width: 100px;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: default;
   text-align: center;
   font-size: 12px;
-  color: rgb(80, 80, 80);
-  transition: background 0.15s;
+  color: white;
+  user-select: none;
+  transition: background 0.15s ease;
 }
 
+/* Icon */
 .folder img {
   width: 64px;
   height: auto;
-  transition: opacity 0.15s;
+  transition:
+    transform 0.15s ease,
+    opacity 0.15s ease;
 }
 
+/* Hover effect (subtle like Mac) */
 .folder:hover img {
-  opacity: 0.75;
+  transform: scale(1.05);
 }
 
+/* Label */
 .folder p {
-  margin: 0;
-  font-size: 10px;
+  margin: 4px 0 0;
+  font-size: 11px;
+  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
+}
+
+/* Selected state (VERY important for Mac feel) */
+.folder.selected {
+  background: rgba(0, 100, 255, 0.25);
+  backdrop-filter: blur(6px);
+}
+
+.folder.selected p {
+  color: white;
+}
+
+.folder-label span {
+  display: inline;
+  padding: 1px 4px;
+  border-radius: 3px;
+}
+.folder.selected p span {
+  background: rgba(40, 100, 255, 0.9);
+  box-shadow: 0 0 0 1.5px rgba(80, 140, 255, 0.7);
 }
 
 /* ============================================
@@ -222,6 +275,7 @@ p {
   padding: 8px 0;
   border-right: 0.5px solid rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
+  text-align: left;
 }
 
 .sidebar-head {
@@ -236,6 +290,7 @@ p {
 .sidebar-row {
   display: flex;
   align-items: center;
+
   gap: 7px;
   padding: 5px 12px;
   margin: 1px 4px;
@@ -259,6 +314,7 @@ p {
   padding: 20px 24px;
   overflow-y: auto;
   user-select: text;
+  text-align: left;
 }
 
 .win-content h2 {

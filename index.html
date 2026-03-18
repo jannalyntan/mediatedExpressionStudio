@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- The homepage is designed with a macOS-inspired interface to simulate a working digital environment.
+     A folder-based system is used to organise the project’s process, reinforcing the concept of navigation,
+     exploration, and structured storage of different works. -->
+
     <!-- Top menu bar -->
     <div class="menu-bar">
       <div class="apple-logo"></div>
@@ -14,9 +18,17 @@
         <span>File</span>
         <span>Edit</span>
         <span>View</span>
+        <span>Go</span>
+        <span>Window</span>
         <span>Help</span>
       </div>
+      <div class="menu-right">
+        <span>Wed Mar 18</span><span id="time">12:00 PM</span>
+      </div>
     </div>
+
+    <!-- Learning to use the 'onblclick' from claude Ai since I want to put multiple different folders in the future, 
+     doing this was easier for my to link up in JS. -->
 
     <!-- Desktop -->
     <div class="desktop">
@@ -29,7 +41,7 @@
             ondblclick="openWindow('about-me')"
           />
 
-          <p style="margin: 0px">About Me</p>
+          <p style="margin: 0px"><span>About Me</span></p>
         </div>
       </section>
 
@@ -41,10 +53,12 @@
             id="ass-1-file"
             ondblclick="openWindow('ass-1')"
           />
-          <p style="margin: 0px">Assignment 1</p>
+          <p style="margin: 0px"><span>Assignment 1</span></p>
         </div>
       </section>
     </div>
+
+    <!-- This is the folder system I tried to recreate from the finder in Mac system. -->
 
     <!-- Finder Window -->
     <div class="finder-window" id="finder-win">
@@ -92,7 +106,6 @@
             target="_blank"
             >🔗 Link to my GitHub</a
           >
-
         </div>
 
         <div class="win-content" id="tab-ass-1">
