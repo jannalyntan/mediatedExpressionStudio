@@ -24,6 +24,7 @@ p {
   font-weight: lighter;
   margin-left: 10%;
   margin-right: 10%;
+  color: #000;
 }
 
 h1,
@@ -164,7 +165,7 @@ button:hover {
 #heading,
 #ending {
   width: 100vw;
-  background-image: url(images/background.png);
+  background-image: url(images/kseniya-lapteva-kOajnscQxW8-unsplash.jpg);
   background-repeat: no-repeat;
   background-position: center;
   color: white;
@@ -348,6 +349,10 @@ button:hover {
 
 #backToTopBtn:hover {
   background-color: var(--yellow-dark);
+}
+
+#backTopBtn:hover {
+  color: var(--blue);
 }
 
 #backToTopBtn.show {
