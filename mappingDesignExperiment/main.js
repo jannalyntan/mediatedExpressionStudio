@@ -3,6 +3,9 @@
 //---------------------------------------------------
 const stageContainer = document.querySelector("#stage-container");
 const circleBtn = document.querySelector("#circle-btn");
+const changeRed = document.querySelector("#change-red");
+const changeBlue = document.querySelector("#change-blue");
+const changeGreen = document.querySelector("#change-green");
 
 //Find width
 let stageContainerWidth = stageContainer.offsetWidth;
@@ -45,3 +48,23 @@ function drawNewCircle() {
 }
 
 circleBtn.addEventListener("click", drawNewCircle);
+
+//---------------------------------------------------
+// Chnage colour of circle via radio
+//---------------------------------------------------
+function changeColourRadio(clickEvent) {
+  //find the value of whichever of the radio buttons was clicked
+  let newColour = clickEvent.target.value;
+
+  //set the new circle colour to that value
+  circleColour = newColour;
+}
+
+// add eventlisteners
+changeRed.addEventListener("click", changeColourRadio);
+changeBlue.addEventListener("click", changeColourRadio);
+changeGreen.addEventListener("click", changeColourRadio);
+
+//---------------------------------------------------
+// Chnage colour of circle via slider
+//---------------------------------------------------
