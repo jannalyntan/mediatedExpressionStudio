@@ -1,7 +1,6 @@
-/* ----------------------------------- */
-/* Btn----------------------------- */
-/* ----------------------------------- */
-
+//-----------------------------------
+//Button-----------------------------
+//-----------------------------------
 document.querySelectorAll("[data-target]").forEach((btn) => {
   btn.addEventListener("click", () => {
     document
@@ -16,9 +15,10 @@ document.querySelectorAll(".links").forEach((btn) => {
   });
 });
 
-/* ----------------------------------- */
-/* Back to Top----------------------------- */
-/* ----------------------------------- */
+//-----------------------------------
+//Back To Top------------------------
+//-----------------------------------
+
 document.getElementById("backTopBtn").addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
@@ -46,8 +46,17 @@ backToTopBtn.addEventListener("click", () => {
   });
 });
 
-// grab your colours from the CSS variables
+//-----------------------------------
+//Coloured Titles--------------------
+//-----------------------------------
+
+// This was done to add more character to the website. Since I wanted it to be more playful,
+// I used the colours from the css to add some personality to the website.
+
+// This was a way I found out to get the information from my css and html
 const root = getComputedStyle(document.documentElement);
+
+// Using the variable colours I created in css, adding trim as I found out that there might be errors if I don't.
 const colours = [
   root.getPropertyValue("--red").trim(),
   root.getPropertyValue("--blue").trim(),
@@ -56,6 +65,7 @@ const colours = [
   root.getPropertyValue("--orange").trim(),
 ];
 
+// using this to get the word from the html and split it putting a span inside it to have each letter be a different
 function rainbowText(elementId) {
   const el = document.getElementById(elementId);
   const text = el.innerText;
@@ -70,6 +80,6 @@ function rainbowText(elementId) {
 }
 
 rainbowText("inspiration");
-rainbowText("projectSpeculation");
+rainbowText("introduction");
 rainbowText("interactive");
 rainbowText("headertitle");
