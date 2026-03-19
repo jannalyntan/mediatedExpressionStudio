@@ -72,3 +72,4 @@ function rainbowText(elementId) {
 rainbowText("inspiration");
 rainbowText("projectSpeculation");
 rainbowText("interactive");
+rainbowText("headertitle");
