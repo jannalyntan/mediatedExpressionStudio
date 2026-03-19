@@ -8,7 +8,6 @@
 }
 
 /* Achieved the background through the linear-gradiaent trying to get it to look as similar to an apple system as possible */
-
 body {
   font-family:
     -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -163,6 +162,7 @@ p {
 /*-------------------------------------------- 
    Finder Window
 --------------------------------------------  */
+/* Done through trial and error to get it looking most like an apple system */
 .finder-window {
   display: none;
   position: fixed;
@@ -221,7 +221,6 @@ p {
 .sidebar-row {
   display: flex;
   align-items: center;
-
   gap: 7px;
   padding: 5px 12px;
   margin: 1px 4px;

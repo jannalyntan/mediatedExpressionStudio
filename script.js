@@ -61,7 +61,11 @@ function selectFolder(e, id) {
   document.getElementById(id).classList.add("selected");
 }
 
-// Google this feature
+// --------------------------------------------------
+// Time and Date
+// --------------------------------------------------
+
+// Google this feature and then changed it a bit for the calender date
 function updateClock() {
   const now = new Date();
   const h = now.getHours();
@@ -75,3 +79,31 @@ function updateClock() {
 }
 updateClock();
 setInterval(updateClock, 20000);
+
+function updateDate() {
+  const date = new Date();
+  const day = date.getDate();
+  const monthNames = [
+    "Jan",
+    "Feb",
+    "Mar",
+    "Apr",
+    "May",
+    "Jun",
+    "Jul",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec",
+  ];
+  const month = monthNames[date.getMonth()];
+
+  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  const weekday = weekdays[date.getDay()];
+
+  const formattedDate = `${weekday} ${month} ${day}`;
+
+  document.getElementById("date").textContent = formattedDate;
+}
+updateDate();
