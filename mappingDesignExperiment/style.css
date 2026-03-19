@@ -17,45 +17,47 @@ button {
   padding: 10px;
 }
 
+.slider {
+  padding: 10px;
+}
+
 input {
-  -webkit-appearance: var(--col03);
+  -webkit-appearance: none;
   background: transparent;
   cursor: pointer;
-  width: 15rem;
+  width: 20rem;
 }
 
 /* Using a gradient colour to make it cohesive. Having each of the different sliders be different shades since they produce different functions.   */
 /* slider track */
-#var1Range[type="range"]::-webkit-slider-runnable-track {
-  background-color: var(--col03);
+#change-red2[type="range"]::-webkit-slider-runnable-track {
+  background-color: red;
   border-radius: 10px;
   height: 10px;
 }
 
-#var2Range[type="range"]::-webkit-slider-runnable-track {
-  background-color: var(--col06);
+#change-blue2[type="range"]::-webkit-slider-runnable-track {
+  background-color: blue;
   border-radius: 10px;
   height: 10px;
 }
 
-#var3Range[type="range"]::-webkit-slider-runnable-track {
-  background-color: var(--col07);
+#change-green2[type="range"]::-webkit-slider-runnable-track {
+  background-color: green;
   border-radius: 10px;
   height: 10px;
 }
 
-/* slider thumb */
+/* slider thumb (Chrome, Safari, Edge) */
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
+  -webkit-appearance: none;
   appearance: none;
-  margin-top: -3px; /* Centers thumb on the track */
-  background-color: var(--col05);
-  border-radius: 0.5rem;
-  height: 1rem;
-  width: 1rem;
-}
 
-input[type="range"]:focus::-webkit-slider-thumb {
-  outline: 3px solid #808080;
-  outline-offset: 0.125rem;
+  background-color: black;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%; /* makes it a circle */
+
+  border: 2px solid #ccc; /* optional: gives contrast */
+  margin-top: -3px; /* aligns with track */
 }
