@@ -8,3 +8,11 @@ main {
   background-color: coral;
   flex: 1;
 }
+
+.toolBar {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+}
