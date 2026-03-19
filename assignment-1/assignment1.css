@@ -237,15 +237,6 @@ button:hover {
   width: 400px;
   height: 200px;
 }
-.background1 {
-  width: 400px;
-  height: 100px;
-  color: white;
-}
-.background2 {
-  width: 600px;
-  height: 400px;
-}
 
 .colouredBg {
   background-color: var(--faint);
@@ -254,47 +245,9 @@ button:hover {
   color: rgb(0, 0, 0);
 }
 
-/* --- Hover reveal cards --- */
-.hoverover {
-  color: white;
-  border-radius: 5px;
-  width: 550px;
-  height: 325px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-
-.hoverover:hover {
-  background-color: var(--red);
-  border-radius: 10px;
-}
-
-.hoverover:hover img {
-  display: none;
-}
-
-.hoverover:after {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  font-weight: lighter;
-  content: attr(data-hover);
-  font-size: 16px;
-  padding: 30px;
-  text-align: center;
-  position: absolute;
-  opacity: 0;
-  transition: opacity 0.15s ease-in-out;
-  border-radius: 15px;
-}
-
-.hoverover:hover:after {
-  opacity: 1;
-}
-
-/* ============================================
-   SECTION HEADINGS
-   ============================================ */
+/* --------------------------------------------
+     Section Heading
+   -------------------------------------------- */
 
 #introduction,
 #inspiration,

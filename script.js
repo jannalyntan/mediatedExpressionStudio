@@ -61,15 +61,7 @@ function selectFolder(e, id) {
   document.getElementById(id).classList.add("selected");
 }
 
-// Deselect when clicking empty desktop
-document.querySelector(".desktop").addEventListener("click", function (e) {
-  if (e.target === this) {
-    document
-      .querySelectorAll(".folder")
-      .forEach((f) => f.classList.remove("selected"));
-  }
-});
-
+// Google this feature
 function updateClock() {
   const now = new Date();
   const h = now.getHours();
@@ -81,7 +73,5 @@ function updateClock() {
 
   document.getElementById("time").textContent = formattedTime;
 }
-
-// Run immediately + update every minute
 updateClock();
-setInterval(updateClock, 60000);
+setInterval(updateClock, 20000);

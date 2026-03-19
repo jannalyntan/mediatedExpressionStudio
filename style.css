@@ -100,6 +100,7 @@ p {
 /* --------------------------------------------
    DESKTOP
    -------------------------------------------- */
+
 .desktop {
   position: fixed;
   top: 24px;
@@ -131,7 +132,7 @@ p {
   width: 100px;
   padding: 6px;
   border-radius: 6px;
-  cursor: default;
+  cursor: pointer;
   text-align: center;
   font-size: 12px;
   color: white;
@@ -148,41 +149,20 @@ p {
     opacity 0.15s ease;
 }
 
-/* Hover effect (subtle like Mac) */
 .folder:hover img {
   transform: scale(1.05);
 }
 
-/* Label */
+/* Label for the folder */
 .folder p {
   margin: 4px 0 0;
   font-size: 11px;
   text-shadow: 0 3px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* Selected state (VERY important for Mac feel) */
-.folder.selected {
-  background: rgba(0, 100, 255, 0.25);
-  backdrop-filter: blur(6px);
-}
-
-.folder.selected p {
-  color: white;
-}
-
-.folder-label span {
-  display: inline;
-  padding: 1px 4px;
-  border-radius: 3px;
-}
-.folder.selected p span {
-  background: rgba(40, 100, 255, 0.9);
-  box-shadow: 0 0 0 1.5px rgba(80, 140, 255, 0.7);
-}
-
-/* ============================================
-   FINDER WINDOW
-   ============================================ */
+/*-------------------------------------------- 
+   Finder Window
+--------------------------------------------  */
 .finder-window {
   display: none;
   position: fixed;
@@ -217,55 +197,6 @@ p {
   padding: 0 12px;
   gap: 8px;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.12);
-  cursor: grab;
-  flex-shrink: 0;
-}
-
-.titlebar:active {
-  cursor: grabbing;
-}
-
-/* Traffic Lights */
-.traffic-lights {
-  display: flex;
-  gap: 7px;
-}
-
-.tl {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 0.5px solid rgba(0, 0, 0, 0.15);
-  transition: filter 0.15s;
-}
-
-.tl:hover {
-  filter: brightness(0.82);
-}
-.tl-red {
-  background: #ff5f57;
-}
-.tl-yellow {
-  background: #ffbd2e;
-}
-.tl-green {
-  background: #28ca41;
-}
-
-.win-title {
-  flex: 1;
-  text-align: center;
-  font-size: 12px;
-  font-weight: 500;
-  color: #333;
-}
-
-/* Window Body */
-.win-body {
-  display: flex;
-  flex: 1;
-  overflow: hidden;
 }
 
 /* Sidebar */
@@ -306,6 +237,55 @@ p {
 }
 .sidebar-row.active {
   background: rgba(100, 150, 255, 0.25);
+}
+
+/* -------------------------------------------- 
+   Close Buttons
+  -------------------------------------------- */
+.traffic-lights {
+  display: flex;
+  gap: 7px;
+}
+
+/* Each Button */
+.tl {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0.5px solid rgba(0, 0, 0, 0.15);
+  transition: filter 0.15s;
+}
+
+.tl:hover {
+  filter: brightness(0.82);
+}
+.tl-red {
+  background: #ff5f57;
+}
+.tl-yellow {
+  background: #ffbd2e;
+}
+.tl-green {
+  background: #28ca41;
+}
+
+.win-title {
+  flex: 1;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: #333;
+}
+
+/* -------------------------------------------- 
+   Content for Finder
+  --------------------------------------------  */
+
+.win-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
 }
 
 /* Content Area */
@@ -387,7 +367,6 @@ p {
   display: none;
 }
 
-/* shown when active */
 .win-content.active {
   display: block;
 }
