@@ -1,0 +1,18 @@
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.stageContainer {
+  background-color: coral;
+  flex: 1;
+}
+
+.toolBar {
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+}
