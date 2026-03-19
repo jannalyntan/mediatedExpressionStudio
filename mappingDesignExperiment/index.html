@@ -7,7 +7,7 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>changeMe!!!!</title>
+    <title>Mapping Experimental Design</title>
 
     <script src="https://unpkg.com/konva@10/konva.min.js"></script>
 
@@ -19,12 +19,40 @@
     <main>
       <div class="toolBar">
         <button id="circle-btn">draw a new circle</button>
-        <color-slider
-          space="hsl"
-          stops="red, yellow, lime, aqua, blue, magenta, red"
-          oncolorchange="this.nextElementSibling.textContent = this.color"
-        ></color-slider>
-        <output></output>
+        <fieldset>
+          <legend>Select a color:</legend>
+
+          <div>
+            <input
+              type="radio"
+              id="change-red"
+              name="colorSelect"
+              value="red"
+              checked
+            />
+            <label for="change-red">Red</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="change-blue"
+              name="colorSelect"
+              value="blue"
+            />
+            <label for="change-blue">Blue</label>
+          </div>
+
+          <div>
+            <input
+              type="radio"
+              id="change-green"
+              name="colorSelect"
+              value="green"
+            />
+            <label for="change-green">Green</label>
+          </div>
+        </fieldset>
       </div>
 
       <div class="stageContainer" id="stage-container">
