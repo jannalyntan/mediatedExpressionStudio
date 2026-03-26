@@ -1,0 +1,41 @@
+:root {
+  --blue: #4062ad;
+  --grey-white: #eef0ea;
+  --yellow: #fbce2e;
+  --pink: #f3828a;
+  --green: #508a78;
+  --off-white: #fff6e9;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+#square-container {
+  background-color: var(--grey-white);
+  width: 70vw;
+  height: 80vh;
+  border-radius: 20px;
+  padding: 16px;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 8px;
+  width: 50px;
+  height: 50px;
+}
+
+.square {
+  background-color: rgba(0, 0, 0, 0.5);
+
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
