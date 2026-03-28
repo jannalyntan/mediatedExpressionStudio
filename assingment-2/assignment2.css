@@ -15,10 +15,14 @@ body {
   overflow: hidden;
 }
 
+/* ---------------------------------------- */
+/* Square Grid */
+/* ---------------------------------------- */
+
 #square-container {
   background-color: var(--grey-white);
-  width: 70vw;
-  height: 80vh;
+  width: 65vw;
+  height: 74vh;
   border-radius: 20px;
   padding: 16px;
 }
@@ -27,15 +31,18 @@ body {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(6, 1fr);
-  gap: 8px;
+  gap: 10px;
   width: 50px;
   height: 50px;
 }
 
 .square {
   background-color: rgba(0, 0, 0, 0.5);
-
-  width: 50px;
-  height: 50px;
-  border-radius: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 20px;
 }
+
+/* ---------------------------------------- */
+/* Draggable Area*/
+/* ---------------------------------------- */

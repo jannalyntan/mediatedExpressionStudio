@@ -45,3 +45,58 @@ function drawNewCircle() {
 }
 
 circleBtn.addEventListener("click", drawNewCircle);
+
+//---------------------------------------------------
+// Drawing Feature
+//---------------------------------------------------
+
+//keep track of when btn is held
+let isDrawing = false;
+let lastLine;
+
+//user presses mouse button
+function drawMouseDown() {
+  isDrawing = true;
+
+  const pos = stage.getPointerPosition();
+
+  lastLine = new Konva.Line({
+    stroke: "red",
+    strokeWidth: "5",
+    lineCap: "round",
+    lineJoin: "round",
+    points: [pos.x, pos.y, pos.x, pos.y],
+  });
+  firstLayer.add(lastLine);
+}
+
+//add function to mousedown event
+stage.on("mousedown", drawMouseDown);
+
+//user moves their moouse
+function drawMouseMove() {
+  //dont run if not drawing
+  if (isDrawing === false) {
+    return;
+  }
+
+  //if isDrawing is true
+  const pos = stage.getPointerPosition();
+
+  let newPoints = lastLine.points().concat([pos.x, pos.y]);
+  lastLine.points(newPoints);
+}
+
+//add function to mousemove event
+stage.on("mousemove", drawMouseMove);
+
+//user releases mouse button
+function drawMouseUp() {
+  isDrawing = false;
+}
+
+//add function to mouseup event
+// stage.on("mouseup", drawMouseUp);
+
+//this way there will be no glutch since it doesnt matter whether u r in or out of window to stop drawing
+window.addEventListener("mouseup", drawMouseUp);
