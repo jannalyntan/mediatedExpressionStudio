@@ -42,6 +42,11 @@ body {
 .square {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  position: relative;
+}
+
+.occupied {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 /* ---------------------------------------- */
@@ -75,3 +80,13 @@ body {
   height: 100px;
   border-radius: 20px;
 }
+
+.shape {
+  cursor: grab;
+}
+
+.shape.dragging {
+  opacity: 0.7;
+  cursor: grab;
+}
+
