@@ -24,8 +24,8 @@ body {
   width: 65vw;
   height: 74vh;
   border-radius: 20px;
-  padding: 20px;
-  margin-left: 5%;
+
+  margin-left: 3%;
 
   display: flex;
   justify-content: center;
@@ -55,16 +55,16 @@ body {
 
 .shape-container {
   background-color: var(--grey-white);
-  width: 30vw;
+  width: 25vw;
   height: 74vh;
   border-radius: 20px;
-  padding: 20px;
 
-  align-items: right;
-
+  margin-left: 100px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
 }
 
 #rectangle {
