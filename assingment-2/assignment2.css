@@ -21,7 +21,7 @@ body {
 
 #square-container {
   background-color: var(--grey-white);
-  width: 60vw;
+  width: 65vw;
   height: 74vh;
   border-radius: 20px;
   padding: 20px;
@@ -58,13 +58,13 @@ body {
   width: 30vw;
   height: 74vh;
   border-radius: 20px;
-  padding: 16px;
-  margin-left: 5%;
+  padding: 20px;
+
+  align-items: right;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
 }
 
 #rectangle {
@@ -89,4 +89,3 @@ body {
   opacity: 0.7;
   cursor: grab;
 }
-
