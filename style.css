@@ -123,6 +123,12 @@ p {
   right: 10px;
 }
 
+.assingment-2 {
+  position: absolute;
+  top: 180px;
+  right: 10px;
+}
+
 .folder {
   display: flex;
   flex-direction: column;
