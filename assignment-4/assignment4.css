@@ -1,0 +1,580 @@
+/* ---------------------------------------------
+   COLOURS 
+  --------------------------------------------- */
+/* used the root colours to make changing the colour system easier */
+
+:root {
+  --red: #bf0436;
+  --blue: #03588c;
+  --faint: rgba(3, 88, 140, 0.2);
+  --yellow: #d9a404;
+  --yellow-dark: #d98e04;
+  --orange: #f2762e;
+  --tag: rgba(0, 28, 45, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ---------------------------------------------
+   BASE
+--------------------------------------------- */
+
+body {
+  font-family: "Barriecito", system-ui;
+}
+
+p {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+  margin-left: 10%;
+  margin-right: 10%;
+  color: #000;
+  background-color: rgba(red, green, blue, alpha);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--red);
+  font-family: "Barriecito", system-ui;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  text-decoration: none;
+  scale: 1.05;
+  background-color: var(--faint);
+  border-radius: 15px;
+}
+
+/* ============================================
+   LAYOUT
+   ============================================ */
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  justify-content: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.sidebyside {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.sidebyside2 {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.left {
+  text-align: left;
+  align-items: left;
+  margin-left: 10%;
+}
+
+.sidebysideImg {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.right {
+  align-items: right;
+  text-align: right;
+  margin-right: 10%;
+}
+
+.subtext {
+  font-size: smaller;
+  font-style: italic;
+}
+.imageText {
+  display: flex;
+  flex-direction: column;
+}
+.tag {
+  text-align: left;
+  margin-left: 0;
+  font-style: italic;
+  color: var(--tag);
+}
+
+.fullimg {
+  max-width: 1000px;
+}
+/* --------------------------------------------
+   Buttons
+   -------------------------------------------- */
+
+/*  For the header buttons */
+
+button {
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+  color: var(--red);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+/* for more feedback and interaction for the user */
+button:hover {
+  scale: 1.1;
+}
+
+/* --------------------------------------------
+   Gallery
+   -------------------------------------------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+/* --------------------------------------------
+   Content buttons
+   -------------------------------------------- */
+
+/*  For the content buttons */
+.links,
+.experimentsBtn {
+  color: white;
+  background-color: var(--blue);
+  border-radius: 15px;
+  padding: 15px 25px;
+  font-size: 20px;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: lighter;
+  border: none;
+  cursor: pointer;
+}
+
+.links {
+  margin-top: -30px;
+  margin-bottom: 40px;
+}
+.experimentsBtn {
+  margin-top: -100px;
+  margin-bottom: 10px;
+}
+
+/* ============================================
+   Heading & Ending
+   ============================================ */
+/* Adding an image to bring out the personality and style of the website more */
+#heading,
+#ending {
+  width: 100vw;
+  background-image: url(images/kseniya-lapteva-kOajnscQxW8-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#heading {
+  height: 100vh;
+}
+
+#ending {
+  height: 30vh;
+  margin-top: 100px;
+  position: relative;
+}
+
+#heading button,
+#ending button {
+  color: white;
+  background-color: var(--red);
+  border-radius: 15px;
+  padding: 15px 25px;
+}
+
+#heading button:hover,
+#ending button:hover {
+  color: white;
+  scale: 1.1;
+}
+
+#heading .sidebyside,
+#ending .sidebyside {
+  justify-content: center;
+}
+
+#name {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+/* ============================================
+   SKIP TO
+   ============================================ */
+
+#skipto {
+  /* background-color: var(--faint); */
+  width: 100vw;
+  padding: 10px 0 100px 0;
+}
+
+#skipto button {
+  color: white;
+  background-color: var(--blue);
+  border-radius: 15px;
+  padding: 15px 25px;
+}
+
+#skipto .sidebyside {
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ============================================
+   COMPONENTS
+   ============================================ */
+
+.backgroundcolour {
+  background-color: var(--faint);
+  margin-top: 50px;
+  padding: 100px 0;
+  color: white;
+}
+
+.background {
+  border-radius: 15px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #000;
+}
+
+#background {
+  background-color: var(--faint);
+  width: 400px;
+  height: 200px;
+}
+
+#background2 {
+  background-color: var(--faint);
+  width: 400px;
+  height: 200px;
+}
+
+#background3 {
+  background-color: var(--faint);
+  width: 400px;
+  height: 200px;
+}
+
+#background4 {
+  background-color: var(--faint);
+  width: 300px;
+  height: 100px;
+}
+
+.colouredBg {
+  background-color: var(--faint);
+  padding: 50px;
+  border-radius: 15px;
+  color: rgb(0, 0, 0);
+}
+
+#summary {
+  background-color: var(--faint);
+  padding: 50px;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 15px;
+  margin-top: 50px;
+}
+
+/* --------------------------------------------
+     Section Heading
+   -------------------------------------------- */
+
+#purpose,
+#values,
+#interactionDesign,
+#designJudgements,
+#timeline,
+#proud,
+#challenge,
+#peer,
+#reflection {
+  font-size: 180px;
+  color: var(--red);
+}
+
+/* ============================================
+   BACK TO TOP BUTTON
+   ============================================ */
+
+#backToTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+  background-color: var(--yellow);
+  color: white;
+  border: none;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#backToTopBtn:hover {
+  background-color: var(--yellow-dark);
+}
+
+#backTopBtn:hover {
+  color: var(--blue);
+}
+
+#backToTopBtn.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* --------------------------------------- */
+/* Timeline--------------------------------- */
+/* --------------------------------------- */
+
+.timeline-container {
+  margin-top: -50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 60px;
+  color: white;
+  margin-left: -25px;
+}
+
+.timeline-container p {
+  margin-top: -20px;
+  color: black;
+}
+
+.weeks {
+  width: 140px;
+}
+
+#week2 {
+  margin-left: -30px;
+}
+
+#week4 {
+  margin-left: -10px;
+}
+
+.timeline {
+  position: relative;
+  width: 80%;
+  max-width: 1400px; /* optional */
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.timeline::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  background-color: var(--faint);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 71px;
+  margin-bottom: 901px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item.left {
+  left: -134px;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 49.7%;
+  text-align: left;
+}
+
+.timeline-item .content {
+  background-color: var(--faint);
+  padding: 30px;
+  border-radius: 15px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: -14px;
+  background-color: white;
+  border: 4px solid var(--blue);
+  top: 20px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-item.right::before {
+  left: -10px;
+}
+
+.timeline-item h2 {
+  margin-bottom: 10px;
+}
+
+.timeline-item h2 span {
+  font-style: italic;
+  font-size: smaller;
+}
+
+.timeline-item p,
+.timeline-item li {
+  line-height: 1.2;
+  color: black;
+  text-align: left;
+}
+
+.timeline-item ul {
+  padding-left: 20px;
+  margin: 10px 0;
+  text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+  .timeline::after {
+    left: 30px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 60px;
+    padding-right: 25px;
+  }
+
+  .timeline-item.right {
+    left: 0;
+  }
+
+  .timeline-item::before {
+    left: 18px;
+    right: auto;
+  }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+
+.timeline-item {
+  opacity: 0;
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.timeline-item.left {
+  transform: translateX(-80px);
+}
+
+.timeline-item.right {
+  transform: translateX(80px);
+}
+
+.timeline-item.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+#purpose,
+#values,
+#interactionDesign,
+#designJudgements,
+#timeline,
+#proud,
+#challenge,
+#peer,
+#reflection {
+  opacity: 0;
+  transform: translateY(60px);
+  transition:
+    opacity 1s ease,
+    transform 1s ease;
+}
+
+#purpose.show,
+#values.show,
+#interactionDesign.show,
+#designJudgements.show,
+#timeline.show,
+#proud.show,
+#challenge.show,
+#peer.show,
+#reflection.show {
+  opacity: 1;
+  transform: translateY(0);
+}
