@@ -129,6 +129,18 @@ p {
   right: 10px;
 }
 
+.assingment-3 {
+  position: absolute;
+  top: 260px;
+  right: 10px;
+}
+
+.assingment-4 {
+  position: absolute;
+  top: 340px;
+  right: 10px;
+}
+
 .folder {
   display: flex;
   flex-direction: column;
